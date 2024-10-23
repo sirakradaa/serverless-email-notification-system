@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <h1>User Registrations and Email Statuses</h1>
+    <a href="/admin/logout">Logout</a>
+    <table>
+      <tr>
+        <th>User ID</th>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Email Status</th>
+      </tr>
+      <% users.forEach(user => { %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td><%= user.name %></td>
+        <td>
+          <% user.emailStatuses.forEach(status => { %> <%= status.status %> (<%=
+          status.createdAt %>)<br />
+          <% }) %>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
