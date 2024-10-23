@@ -30,6 +30,4 @@ describe("User Registration API", () => {
         done();
       });
   });
-
-  // Add more tests for error handling, duplicate emails, etc.
 });

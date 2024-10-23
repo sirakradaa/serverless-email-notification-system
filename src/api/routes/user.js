@@ -3,7 +3,7 @@ const router = express.Router();
 const { User, EmailStatus } = require("../../models");
 const { sequelize } = require("../../models");
 const AWS = require("aws-sdk");
-const sqs = new AWS.SQS({ region: "us-east-1" }); // replace with your region
+const sqs = new AWS.SQS({ region: "us-east-1" });
 
 router.delete("/:id", async (req, res) => {
   const t = await sequelize.transaction();
@@ -51,7 +51,7 @@ router.post("/register", async (req, res) => {
     // Send message to SQS
     const params = {
       MessageBody: JSON.stringify({ email, name }),
-      QueueUrl: process.env.SQS_QUEUE_URL, // make sure this is in your .env file
+      QueueUrl: process.env.SQS_QUEUE_URL,
     };
 
     await sqs.sendMessage(params).promise();
