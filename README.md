@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a serverless email notification system that allows users to register and automatically receive welcome emails. It demonstrates the integration of various AWS services (SQS, Lambda, SES, SNS) with a Node.js backend, showcasing a modern, cloud-native application architecture. The system was developed to demonstrate proficiency in serverless architecture, AWS services, and Node.js to potential employers during the interview process.
+This project is a serverless email notification system that allows users to register and automatically receive welcome emails. It demonstrates the integration of various AWS services (SQS, Lambda, SES, SNS) with a Node.js backend, showcasing a modern, cloud-native application architecture. The system was developed to demonstrate proficiency in serverless architecture, AWS services, and Node.js.
 
 ## Features
 
